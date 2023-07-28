@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT , KC_Z          , KC_X          , KC_C   , KC_V   , KC_B   ,                    KC_N   , KC_M  , KC_COMM, KC_DOT , KC_SLSH, KC_BSLS,
         KC_F12        , KC_LCTL       , KC_LALT       , KC_LEFT, KC_RGHT, _______,                    _______, KC_UP , KC_DOWN, KC_LBRC, KC_RBRC, RCTL_T(KC_F8),
                                                           KC_LWIN, LALT(KC_RWIN), KC_F11,                    KC_DEL, KC_ENT, KC_RALT,
-                                                                        TG(RAISE),                    TG(NUM),
+                                                                          _______,                    _______,
                                                                            KC_SPC,                    KC_BSPC,
                                                                         MO(LOWER),                    KC_RSFT
     ),
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RALT(KC_F4)  , LCTL(KC_Q) , LCTL(KC_W), LCTL(KC_E), LCTL(KC_R), LCTL(KC_T),        LCTL(KC_Y), KC_7   , KC_8   , KC_9   , KC_PSCR, KC_F12,
         KC_ENT       , LCTL(KC_A) , LCTL(KC_S), LCTL(KC_D), LCTL(KC_F), LCTL(KC_G),        LCTL(KC_H), KC_4   , KC_5   , KC_6   , KC_BSPC, _______,
         LCTL(KC_SLSH), LCTL(KC_Z) , LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_B),        LCTL(KC_N), KC_1   , KC_2   , KC_3   , KC_DOT , _______,
-        _______      , _______    , _______   , KC_PGUP   , KC_PGDN   , _______   ,        _______, KC_HOME, KC_END , KC_VOLD, KC_VOLU, KC_MUTE,
+        RESET        , _______    , _______   , KC_PGUP   , KC_PGDN   , _______   ,        _______, KC_HOME, KC_END , KC_VOLD, KC_VOLU, KC_MUTE,
                                            _______, _______, _______,                      _______, LWIN(KC_SPC), _______,
                                                              _______,                      _______,
                                                              _______,                      KC_0,
