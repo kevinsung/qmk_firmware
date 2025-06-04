@@ -28,22 +28,22 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
   switch(combo_index) {
     case ZX_MOVE_WINDOW_MONITOR_LEFT:
       if (pressed) {
-        tap_code16(LSFT(LWIN(KC_LEFT)));
+        tap_code16(LSFT(LALT(KC_LEFT)));
       }
       break;
     case CV_MOVE_WINDOW_MONITOR_RIGHT:
       if (pressed) {
-        tap_code16(LSFT(LWIN(KC_RGHT)));
+        tap_code16(LSFT(LALT(KC_RGHT)));
       }
       break;
     case ZXC_MOVE_WINDOW_MONITOR_DOWN:
       if (pressed) {
-        tap_code16(LSFT(LWIN(KC_DOWN)));
+        tap_code16(LSFT(LALT(KC_DOWN)));
       }
       break;
     case XCV_MOVE_WINDOW_MONITOR_UP:
       if (pressed) {
-        tap_code16(LSFT(LWIN(KC_UP)));
+        tap_code16(LSFT(LALT(KC_UP)));
       }
       break;
   }
@@ -55,8 +55,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB        , KC_Q          , KC_W          , KC_E   , KC_R   , KC_T   ,                    KC_Y   , KC_U  , KC_I   , KC_O   ,  KC_P  , KC_EQL ,
         C_S_T(KC_CAPS), KC_A          , KC_S          , KC_D   , KC_F   , KC_G   ,                    KC_H   , KC_J  , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
         KC_LSFT , KC_Z          , KC_X          , KC_C   , KC_V   , KC_B   ,                    KC_N   , KC_M  , KC_COMM, KC_DOT , KC_SLSH, KC_BSLS,
-        KC_F12        , KC_LCTL       , KC_LALT       , KC_LEFT, KC_RGHT, _______,                    _______, KC_UP , KC_DOWN, KC_LBRC, KC_RBRC, RCTL_T(KC_F8),
-                                                          KC_LWIN, KC_F10, KC_F11,                    KC_DEL, KC_ENT, KC_RALT,
+        KC_F12        , KC_LCTL       , KC_LWIN       , KC_LEFT, KC_RGHT, _______,                    _______, KC_UP , KC_DOWN, KC_LBRC, KC_RBRC, RCTL_T(KC_F8),
+                                                          KC_LALT, KC_F10, KC_F11,                    KC_DEL, KC_ENT, KC_RALT,
                                                                           _______,                    _______,
                                                                            KC_SPC,                    KC_BSPC,
                                                                         MO(LOWER),                    KC_RSFT
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ENT       , LCTL(KC_A) , LCTL(KC_S), LCTL(KC_D), LCTL(KC_F), LCTL(KC_G),        LCTL(KC_H), KC_4   , KC_5   , KC_6   , KC_BSPC, _______,
         LCTL(KC_SLSH), LCTL(KC_Z) , LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_B),        LCTL(KC_N), KC_1   , KC_2   , KC_3   , KC_DOT , _______,
         RESET        , _______    , _______   , KC_PGUP   , KC_PGDN   , _______   ,        _______, KC_HOME, KC_END , KC_VOLD, KC_VOLU, KC_MUTE,
-                                           _______, _______, _______,                      _______, LWIN(KC_SPC), _______,
+                                           _______, _______, _______,                      _______, LALT(KC_SPC), _______,
                                                              _______,                      _______,
                                                              _______,                      KC_0,
                                                              _______,                      LCTL(KC_RSFT)
