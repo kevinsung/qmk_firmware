@@ -8,8 +8,8 @@
 enum combo_events {
   ZX_MOVE_WINDOW_MONITOR_LEFT,
   CV_MOVE_WINDOW_MONITOR_RIGHT,
-  ZXC_MOVE_WINDOW_MONITOR_UP,
-  XCV_MOVE_WINDOW_MONITOR_DOWN
+  ZXC_MOVE_WINDOW_MONITOR_DOWN,
+  XCV_MOVE_WINDOW_MONITOR_UP
 };
 
 const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
@@ -20,8 +20,8 @@ const uint16_t PROGMEM xcv_combo[] = {KC_X, KC_C, KC_V, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
   [ZX_MOVE_WINDOW_MONITOR_LEFT] = COMBO_ACTION(zx_combo),
   [CV_MOVE_WINDOW_MONITOR_RIGHT] = COMBO_ACTION(cv_combo),
-  [ZXC_MOVE_WINDOW_MONITOR_UP] = COMBO_ACTION(zxc_combo),
-  [XCV_MOVE_WINDOW_MONITOR_DOWN] = COMBO_ACTION(xcv_combo),
+  [ZXC_MOVE_WINDOW_MONITOR_DOWN] = COMBO_ACTION(zxc_combo),
+  [XCV_MOVE_WINDOW_MONITOR_UP] = COMBO_ACTION(xcv_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -36,14 +36,14 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         tap_code16(LSFT(LWIN(KC_RGHT)));
       }
       break;
-    case ZXC_MOVE_WINDOW_MONITOR_UP:
-      if (pressed) {
-        tap_code16(LSFT(LWIN(KC_UP)));
-      }
-      break;
-    case XCV_MOVE_WINDOW_MONITOR_DOWN:
+    case ZXC_MOVE_WINDOW_MONITOR_DOWN:
       if (pressed) {
         tap_code16(LSFT(LWIN(KC_DOWN)));
+      }
+      break;
+    case XCV_MOVE_WINDOW_MONITOR_UP:
+      if (pressed) {
+        tap_code16(LSFT(LWIN(KC_UP)));
       }
       break;
   }
