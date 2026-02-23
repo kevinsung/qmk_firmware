@@ -67,10 +67,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ENT       , LCTL(KC_A) , LCTL(KC_S), LCTL(KC_D), LCTL(KC_F), LCTL(KC_G),        LCTL(KC_H), KC_4   , KC_5   , KC_6   , KC_BSPC, _______,
         LCTL(KC_SLSH), LCTL(KC_Z) , LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_B),        LCTL(KC_N), KC_1   , KC_2   , KC_3   , KC_DOT , _______,
         RESET        , _______    , _______   , KC_PGUP   , KC_PGDN   , _______   ,        _______, KC_HOME, KC_END , KC_VOLD, KC_VOLU, KC_MUTE,
-                                           _______, _______, _______,                      _______, LALT(KC_SPC), _______,
+                                           _______, _______, _______,                      _______, LALT(KC_SPC), KC_DOT,
                                                              _______,                      _______,
-                                                             _______,                      KC_0,
-                                                             _______,                      LCTL(KC_RSFT)
+                                                             _______,                      KC_BSPC,
+                                                             _______,                      KC_0
     ),
     [RAISE] = LAYOUT_6x6(
         RESET  , _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
